@@ -105,8 +105,8 @@
 &kp CAPS   &kp A   &kp S   &kp D     &kp F      &kp G                  &kp H    &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
 &kp LSHFT  &kp Z   &kp X   &kp C     &kp V      &kp B                  &kp N    &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
 &kp LCTRL  &mo 4   &mo 6   &kp LBKT  &kp RBKT                                   &kp MINUS  &kp EQUAL  &mo 8    &mo 5     &kp RCTRL
-                                     &kp SPACE  &kp BSPC  &mo 3        &mo 7    &kp DEL    &kp SPACE
-                                     &kp LALT   &kp LGUI  &kp ENTER    &kp ESC  &kp RGUI   &kp RALT
+                                     &kp SPACE  &kp BSPC  &kp ENTER    &kp ESC  &kp DEL    &kp SPACE
+                                     &kp LALT   &kp LGUI  &mo 3        &mo 7    &kp RGUI   &kp RALT
             >;
         };
 
@@ -144,8 +144,8 @@
 &kp APOS   &kp SEMI  &kp L    &kp K      &kp J      &kp H                &kp G      &kp F     &kp D     &kp S   &kp A   &kp CAPS
 &kp RSHFT  &kp FSLH  &kp DOT  &kp COMMA  &kp M      &kp N                &kp B      &kp V     &kp C     &kp X   &kp Z   &kp LSHFT
 &kp RCTRL  &trans    &trans   &kp MINUS  &kp EQUAL                                  &kp LBKT  &kp RBKT  &trans  &trans  &kp LCTRL
-                                         &trans     &kp DEL   &trans     &trans     &kp BSPC  &trans
-                                         &kp RALT   &kp RGUI  &kp ESC    &kp ENTER  &kp LGUI  &kp LALT
+                                         &trans     &kp DEL   &kp ESC    &kp ENTER  &kp BSPC  &trans
+                                         &kp RALT   &kp RGUI  &trans     &trans     &kp LGUI  &kp LALT
             >;
         };
 
@@ -157,8 +157,8 @@
 &trans            &kp PAGE_UP  &kp LEFT           &kp DOWN         &kp RIGHT             &kp PAGE_DOWN                    &trans     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_COMMA  &trans
 &trans            &mkp MB4     &mkp LCLK          &mkp MCLK        &mkp RCLK             &mkp MB5                         &trans     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_EQUAL  &trans
 &trans            &trans       &trans             &trans           &trans                                                            &kp KP_NUMBER_0  &kp KP_NUMBER_0  &kp KP_DOT       &kp KP_ENTER  &trans
-                                                                   &trans                &kp DEL               &trans     &trans     &kp BSPC         &trans
-                                                                   &trans                &trans                &kp ESC    &kp ENTER  &trans           &trans
+                                                                   &trans                &kp DEL               &kp ESC    &kp ENTER  &kp BSPC         &trans
+                                                                   &trans                &trans                &trans     &trans     &trans           &trans
             >;
         };
 
@@ -170,8 +170,8 @@
 &trans  &trans  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_COMMA             &kp LEFT   &kp DOWN       &kp UP       &kp RIGHT  &trans    &trans
 &trans  &trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_EQUAL             &mkp MB4   &mkp LCLK      &mkp MCLK    &mkp RCLK  &mkp MB5  &trans
 &trans  &trans  &kp KP_NUMBER_0  &kp KP_NUMBER_0  &kp KP_DOT                                           &trans         &trans       &trans     &trans    &trans
-                                                  &kp KP_ENTER     &kp DEL       &trans     &trans     &kp BSPC       &trans
-                                                  &trans           &trans        &kp ESC    &kp ENTER  &trans         &trans
+                                                  &kp KP_ENTER     &kp DEL       &kp ESC    &kp ENTER  &kp BSPC       &trans
+                                                  &trans           &trans        &trans     &trans     &trans         &trans
             >;
         };
 
@@ -231,13 +231,13 @@
 
 &trackball_central_listener {
     input-processors =
-        // this gets it to the default installation orientation,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-        // <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-        // multiply sensitivity by 1, divide by 3 (make it slower for scrolling),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+        // this gets it to the default installation orientation,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+        // <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+        // multiply sensitivity by 1, divide by 3 (make it slower for scrolling),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
         <&zip_xy_scaler 1 16>,
         <&zip_scroll_scaler 1 16>,
-        // make this trackball output scrolling events by default instead of cursor movement,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+        // make this trackball output scrolling events by default instead of cursor movement,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
         <&zip_xy_to_scroll_mapper>,
-        // invert vertical scrolling so that the view moves in the same direction as the top of the trackball.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+        // invert vertical scrolling so that the view moves in the same direction as the top of the trackball.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
         <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>;
 };
