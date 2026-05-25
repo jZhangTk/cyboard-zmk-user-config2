@@ -17,9 +17,7 @@
             bindings =
                 <&kp ENTER>,
                 <&macro_wait_time 5>,
-                <&kp FSLH &kp P &kp L &kp A &kp Y &kp E &kp R &kp S>,
-                <&macro_wait_time 200>,
-                <&macro_tap_time 200>;
+                <&kp FSLH &kp P &kp L &kp A &kp Y &kp E &kp R &kp S>;
 
             label = "PLAYERS";
             tap-ms = <10>;
@@ -30,6 +28,8 @@
             #binding-cells = <0>;
             bindings = <&players &kp N1 &kp ENTER>;
             label = "PLAYERS1";
+            wait-ms = <150>;
+            tap-ms = <150>;
         };
 
         players2: players2 {
@@ -37,6 +37,8 @@
             #binding-cells = <0>;
             bindings = <&players &kp N2 &kp ENTER>;
             label = "PLAYERS2";
+            wait-ms = <150>;
+            tap-ms = <150>;
         };
 
         players3: players3 {
@@ -44,6 +46,8 @@
             #binding-cells = <0>;
             bindings = <&players &kp N3 &kp ENTER>;
             label = "PLAYERS3";
+            wait-ms = <150>;
+            tap-ms = <150>;
         };
 
         players4: players4 {
@@ -51,6 +55,8 @@
             #binding-cells = <0>;
             bindings = <&players &kp N4 &kp ENTER>;
             label = "PLAYERS4";
+            wait-ms = <150>;
+            tap-ms = <150>;
         };
 
         players5: players5 {
@@ -58,6 +64,8 @@
             #binding-cells = <0>;
             bindings = <&players &kp N5 &kp ENTER>;
             label = "PLAYERS5";
+            wait-ms = <150>;
+            tap-ms = <150>;
         };
 
         players6: players6 {
@@ -65,6 +73,8 @@
             #binding-cells = <0>;
             bindings = <&players &kp N6 &kp ENTER>;
             label = "PLAYERS6";
+            wait-ms = <150>;
+            tap-ms = <150>;
         };
 
         players7: players7 {
@@ -72,6 +82,8 @@
             #binding-cells = <0>;
             bindings = <&players &kp N7 &kp ENTER>;
             label = "PLAYERS7";
+            wait-ms = <150>;
+            tap-ms = <150>;
         };
 
         players8: players8 {
@@ -79,6 +91,8 @@
             #binding-cells = <0>;
             bindings = <&players &kp N8 &kp ENTER>;
             label = "PLAYERS8";
+            wait-ms = <150>;
+            tap-ms = <150>;
         };
 
         nopickup: nopickup {
@@ -88,8 +102,8 @@
                 <&kp ENTER>,
                 <&macro_wait_time 5>,
                 <&kp FSLH &kp N &kp O &kp P &kp I &kp C &kp K &kp U>,
-                <&macro_wait_time 200>,
-                <&macro_tap_time 200>,
+                <&macro_wait_time 150>,
+                <&macro_tap_time 150>,
                 <&kp P &kp ENTER>;
 
             label = "NOPICKUP";
@@ -234,15 +248,15 @@
 
 &trackball_central_listener {
     input-processors =
-        // this gets it to the default installation orientation,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-        // <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-        // multiply sensitivity by 1, divide by 3 (make it slower for scrolling),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+        // this gets it to the default installation orientation,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+        // <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+        // multiply sensitivity by 1, divide by 3 (make it slower for scrolling),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
         <&zip_xy_scaler 1 8>,
         <&zip_x_scaler 1 8>,
         <&zip_y_scaler 1 8>,
         <&zip_scroll_scaler 1 16>,
-        // make this trackball output scrolling events by default instead of cursor movement,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+        // make this trackball output scrolling events by default instead of cursor movement,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
         <&zip_xy_to_scroll_mapper>,
-        // invert vertical scrolling so that the view moves in the same direction as the top of the trackball.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+        // invert vertical scrolling so that the view moves in the same direction as the top of the trackball.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
         <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>;
 };
