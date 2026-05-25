@@ -238,9 +238,9 @@
 &trackball_peripheral_listener {
     input-processors = <&zip_xy_scaler 5 1>;
 
-    // this gets it to the default installation orientation,,,,,,,,,
-    // <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>;,,,,,,
-    // activate layer 3 within 500ms of the trackball moving,,,,,,
+    // this gets it to the default installation orientation
+    // <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>;
+    // activate layer 3 within 500ms of the trackball moving
     // <&zip_temp_layer 8 1000>;
 };
 
@@ -248,15 +248,15 @@
 
 &trackball_central_listener {
     input-processors =
-        // this gets it to the default installation orientation,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-        // <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-        // multiply sensitivity by 1, divide by 3 (make it slower for scrolling),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+        // this gets it to the default installation orientation
+        // <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>
+        // multiply sensitivity by 1, divide by 3 (make it slower for scrolling)
         <&zip_xy_scaler 1 8>,
         <&zip_x_scaler 1 8>,
         <&zip_y_scaler 1 8>,
         <&zip_scroll_scaler 1 16>,
-        // make this trackball output scrolling events by default instead of cursor movement,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+        // make this trackball output scrolling events by default instead of cursor movement
         <&zip_xy_to_scroll_mapper>,
-        // invert vertical scrolling so that the view moves in the same direction as the top of the trackball.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+        // invert vertical scrolling so that the view moves in the same direction as the top of the trackball.
         <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>;
 };
