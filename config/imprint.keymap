@@ -28,8 +28,8 @@
             #binding-cells = <0>;
             bindings = <&players &kp N1 &kp ENTER>;
             label = "PLAYERS1";
-            wait-ms = <150>;
-            tap-ms = <150>;
+            wait-ms = <100>;
+            tap-ms = <100>;
         };
 
         players2: players2 {
@@ -37,8 +37,8 @@
             #binding-cells = <0>;
             bindings = <&players &kp N2 &kp ENTER>;
             label = "PLAYERS2";
-            wait-ms = <150>;
-            tap-ms = <150>;
+            wait-ms = <100>;
+            tap-ms = <100>;
         };
 
         players3: players3 {
@@ -46,8 +46,8 @@
             #binding-cells = <0>;
             bindings = <&players &kp N3 &kp ENTER>;
             label = "PLAYERS3";
-            wait-ms = <150>;
-            tap-ms = <150>;
+            wait-ms = <100>;
+            tap-ms = <100>;
         };
 
         players4: players4 {
@@ -55,8 +55,8 @@
             #binding-cells = <0>;
             bindings = <&players &kp N4 &kp ENTER>;
             label = "PLAYERS4";
-            wait-ms = <150>;
-            tap-ms = <150>;
+            wait-ms = <100>;
+            tap-ms = <100>;
         };
 
         players5: players5 {
@@ -64,8 +64,8 @@
             #binding-cells = <0>;
             bindings = <&players &kp N5 &kp ENTER>;
             label = "PLAYERS5";
-            wait-ms = <150>;
-            tap-ms = <150>;
+            wait-ms = <100>;
+            tap-ms = <100>;
         };
 
         players6: players6 {
@@ -73,8 +73,8 @@
             #binding-cells = <0>;
             bindings = <&players &kp N6 &kp ENTER>;
             label = "PLAYERS6";
-            wait-ms = <150>;
-            tap-ms = <150>;
+            wait-ms = <100>;
+            tap-ms = <100>;
         };
 
         players7: players7 {
@@ -82,8 +82,8 @@
             #binding-cells = <0>;
             bindings = <&players &kp N7 &kp ENTER>;
             label = "PLAYERS7";
-            wait-ms = <150>;
-            tap-ms = <150>;
+            wait-ms = <100>;
+            tap-ms = <100>;
         };
 
         players8: players8 {
@@ -91,8 +91,8 @@
             #binding-cells = <0>;
             bindings = <&players &kp N8 &kp ENTER>;
             label = "PLAYERS8";
-            wait-ms = <150>;
-            tap-ms = <150>;
+            wait-ms = <100>;
+            tap-ms = <100>;
         };
 
         nopickup: nopickup {
@@ -102,8 +102,8 @@
                 <&kp ENTER>,
                 <&macro_wait_time 5>,
                 <&kp FSLH &kp N &kp O &kp P &kp I &kp C &kp K &kp U>,
-                <&macro_wait_time 150>,
-                <&macro_tap_time 150>,
+                <&macro_wait_time 100>,
+                <&macro_tap_time 100>,
                 <&kp P &kp ENTER>;
 
             label = "NOPICKUP";
